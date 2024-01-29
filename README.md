@@ -26,20 +26,6 @@ $f(n)\in o(g(n))$.
 And let Q be the
 statement that $f(n)\in O(g(n))$.
 
-To prove $P \implies Q$ we'll use a proof by contradiction, let's start by assuming:
+Let's assume that P is true, that is $\forall c>0, \exists n_0, \forall n\ge n_0: f(n) \lt c g(n)$. Since we're assuming P is true then we know $f(n) \lt c g(n)$ given the previous conditions. 
 
-$P \wedge \neg Q$
-
-Or in other words using our definitions above:
-
-$f(n)\in o(g(n))$ meaning that $f(n)$ satisfies the condition: $\forall c>0, \exists n_0, \forall n\ge n_0: f(n) < c g(n)$.
-
-However, we're also assuming that $f(n) \notin O(g(n))$ meaning that $f(n)$ does NOT satisfy the following condition: $\forall c>0, \exists n_0, \forall n\ge n_0: f(n) \leq c g(n)$.
-
-This creates a mathematical contradiction, essentially what we've assumed is that:
-
-
-$f(n) < c g(n)$ while simultaneously $f(n) > c g(n)$ for
-$\forall c>0, \exists n_0, \forall n\ge n_0$
-
-This means that the opposite of our assumption must be true, meaning that $P \implies Q$ is true by contradiction.
+For $f(n) \in O(g(n))$ then $f(n) \leq c g(n)$ for the given $c, n_0$, and $n$ conditions above. Since we know that $f(n) \lt c g(n)$ then it's obvious that $f(n) \leq c g(n)$. Therefore when $f(n) \in o(g(n)) \implies f(n) \in O(g(n))$.
