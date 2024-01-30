@@ -20,12 +20,8 @@ $f(n)\in o(g(n)) \iff \forall c>0, \exists n_0, \forall n\ge n_0: f(n) < c g(n)$
 
 # My proof
 
-Let $P$ be the statement that 
-$f(n)\in o(g(n))$. 
+For a function to be an element of big-oh there must exist constants $c$ and $n_0$ such that $T(n) \leq c f(n), \forall n \geq n_0$. 
 
-And let Q be the
-statement that $f(n)\in O(g(n))$.
+And for a function to be an element of little-oh then for ANY positive constant $c$ there exists an $n_0$ such that $T(n) \lt c f(n), \forall n \geq n_0$. 
 
-Let's assume that P is true, that is $\forall c>0, \exists n_0, \forall n\ge n_0: f(n) \lt c g(n)$. Since we're assuming P is true then we know $f(n) \lt c g(n)$ given the previous conditions. 
-
-For $f(n) \in O(g(n))$ then $f(n) \leq c g(n)$ for the given $c, n_0$, and $n$ conditions above. Since we know that $f(n) \lt c g(n)$ then it's obvious that $f(n) \leq c g(n)$. Therefore when $f(n) \in o(g(n)) \implies f(n) \in O(g(n))$.
+Using a direct proof let's assume that $f(n) \in o(n)$, meaning that for ANY positive constant $c$ there exists an $n_0$ such that $T(n) \lt c f(n), \forall n \geq n_0$. Since little-oh is simply a more strict bound than big-oh, if a function is an element of little-oh, it would HAVE to also be an element of big-oh. The reason being that a function can't be an element of little-oh, and still meet the conditions to be an element of big-oh.
